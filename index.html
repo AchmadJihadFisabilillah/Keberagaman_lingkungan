@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+
+<html lang="id">
+
+<head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="#f472b6" name="theme-color" />
+    <meta content="Keberagaman Lingkunganku — game edukasi budaya Indonesia yang ringan dan menyenangkan."
+        name="description" />
+    <title>Keberagaman Lingkunganku • Game Edukasi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Chewy&family=Nunito:wght@700;800;900&family=Poppins:wght@600;700;800;900&family=Sniglet:wght@400;800&family=Titan+One&display=swap"
+        rel="stylesheet" />
+    <link href="style.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="app-shell">
+        <header class="topbar">
+            <div class="topbar-left">
+                <button aria-label="Kembali ke halaman sebelumnya" class="icon-button back-button hidden"
+                    id="backButton" title="Kembali">←</button>
+                <div aria-hidden="true" class="brand-mark">KL</div>
+                <div class="brand-copy">
+                    <strong>Keberagaman<span>Lingkunganku</span></strong>
+                    <small>Game edukasi budaya Indonesia</small>
+                </div>
+            </div>
+            <div class="topbar-right">
+                <span class="header-pill"><span class="pill-dot"></span> Siap dimainkan</span>
+                <span class="score-chip" id="globalScore">0 poin</span>
+            </div>
+        </header>
+        <main id="main-content">
+            <section aria-labelledby="landing-title" class="screen is-active" id="landing">
+                <div class="hero-grid">
+                    <div class="hero-copy">
+                        <div class="eyebrow">PETUALANGAN BUDAYA NUSANTARA</div>
+                        <h1 id="landing-title">Ayo Jelajahi <em>Nusantara</em></h1>
+                        <p>Kenali pakaian adat, pahami tradisi Nusantara, dan belajar bersikap baik kepada sesama
+                            melalui tiga misi yang seru dan menyenangkan.</p>
+                        <div class="hero-actions">
+                            <button class="btn btn-primary btn-large" data-go="objectives">NEXT <span
+                                    aria-hidden="true">→</span></button>
+                            <span class="micro-note">Tersedia 3 misi dan 4 amplop sikap.</span>
+                        </div>
+                        <div class="feature-pills">
+                            <span>Jelajah budaya</span>
+                            <span>Tantangan interaktif</span>
+                            <span>Kumpulkan poin</span>
+                        </div>
+                    </div>
+                    <div aria-label="Foto keberagaman budaya Indonesia" class="hero-illustration">
+                        <div class="hero-photo-frame">
+                            <img alt="Keberagaman anak-anak dan budaya Indonesia" loading="eager"
+                                src="assets/visual/hero-culture.jpg" />
+                            <div class="hero-photo-caption"><span class="caption-dot"></span>
+                                <div><strong>Jelajahi Nusantara</strong><small>15 daerah • 15 tradisi • 4 amplop
+                                        sikap</small></div>
+                            </div>
+                        </div>
+                        <div class="hero-photo-chip"><span class="chip-icon">15</span><span>Daerah budaya untuk
+                                dijelajahi</span></div>
+                    </div>
+                </div>
+                <div class="welcome-stats">
+                    <div><img alt="Foto pakaian adat Nusantara" class="stat-photo" loading="lazy"
+                            src="assets/visual/objective-clothing.webp" /><strong>15</strong><small>Pakaian Adat</small>
+                    </div>
+                    <div><img alt="Ilustrasi tradisi Nusantara" class="stat-photo" loading="lazy"
+                            src="assets/visual/objective-tradition.webp" /><strong>15</strong><small>Soal
+                            Tradisi</small></div>
+                    <div><img alt="Foto anak-anak Indonesia" class="stat-photo" loading="lazy"
+                            src="assets/visual/objective-friendship.webp" /><strong>4</strong><small>Amplop
+                            Sikap</small></div>
+                </div>
+            </section>
+            <section aria-labelledby="objectives-title" class="screen" id="objectives">
+                <div class="page-intro centered">
+                    <span class="section-kicker">SEBELUM BERMAIN</span>
+                    <h2 id="objectives-title">Apa yang akan <span>kita pelajari?</span></h2>
+                    <p>Yuk, baca tujuan pembelajaran agar petualangan kita makin bermakna.</p>
+                </div>
+                <div class="objective-list">
+                    <article class="objective-card">
+                        <img alt="Pakaian adat tradisional dari berbagai daerah Indonesia" class="objective-photo"
+                            loading="lazy" src="assets/visual/objective-clothing.webp" />
+                        <div class="objective-content">
+                            <div class="objective-heading"><span class="number-badge">01</span>
+                                <h3>Mengenal pakaian adat</h3>
+                            </div>
+                            <p>Peserta didik dapat mengidentifikasi nama dan daerah asal pakaian adat di Indonesia
+                                melalui permainan mencocokkan gambar pakaian adat pada game edukasi dengan tepat minimal
+                                12 dari 15 pakaian adat.</p>
+                            <span class="target-pill">Target: 12 dari 15 pakaian adat</span>
+                        </div>
+                    </article>
+                    <article class="objective-card">
+                        <img alt="Penampilan tradisi dan tarian Nusantara" class="objective-photo" loading="lazy"
+                            src="assets/visual/objective-tradition.webp" />
+                        <div class="objective-content">
+                            <div class="objective-heading"><span class="number-badge">02</span>
+                                <h3>Mengenal tradisi Nusantara</h3>
+                            </div>
+                            <p>Peserta didik dapat mengidentifikasi nama dan daerah asal tradisi di Indonesia melalui
+                                permainan kuis pada game edukasi dengan tepat minimal 12 dari 15 tradisi.</p>
+                            <span class="target-pill">Target: 12 dari 15 soal tradisi</span>
+                        </div>
+                    </article>
+                    <article class="objective-card">
+                        <img alt="Anak-anak Indonesia dari berbagai latar budaya" class="objective-photo" loading="lazy"
+                            src="assets/visual/objective-friendship.webp" />
+                        <div class="objective-content">
+                            <div class="objective-heading"><span class="number-badge">03</span>
+                                <h3>Menjadi sahabat keberagaman</h3>
+                            </div>
+                            <p>Peserta didik dapat menjelaskan sikap yang tepat dalam menghargai keberagaman suku,
+                                agama, ras, dan budaya melalui penyelesaian kartu situasi pada game edukasi dengan
+                                memberikan jawaban yang sesuai pada minimal 3 dari 4 situasi.</p>
+                            <span class="target-pill">Target: 3 dari 4 situasi</span>
+                        </div>
+                    </article>
+                </div>
+                <div class="center-action"><button class="btn btn-primary btn-large" data-go="missions">START
+                        PETUALANGAN <span aria-hidden="true">→</span></button></div>
+            </section>
+            <section aria-labelledby="missions-title" class="screen" id="missions">
+                <div class="page-intro"><span class="section-kicker">PILIH PETUALANGANMU</span>
+                    <h2 id="missions-title">Tiga misi, <span>banyak cerita!</span></h2>
+                    <p>Pilih misi yang ingin kamu mainkan. Kamu bisa kembali ke sini kapan saja.</p>
+                </div>
+                <div class="mission-grid">
+                    <article class="mission-card mission-card-one">
+                        <div class="mission-card-top"><span class="mission-index">MISI 01</span><span
+                                class="status-pill" id="statusM1">Belum dimulai</span></div>
+                        <div class="mission-art"><img alt="Beragam pakaian adat Indonesia dari Aceh, Madura, dan Bali"
+                                loading="lazy" src="assets/visual/mission-clothing.webp" /><span
+                                class="mission-photo-overlay"><span class="photo-play-circle">→</span> Jelajahi Misi
+                                1</span></div>
+                        <div class="mission-card-body">
+                            <h3>Kenali<br />Pakaian Adat</h3>
+                            <p>Temukan daerah asal pakaian adat dengan mencocokkan foto pada peta Indonesia.</p>
+                            <div class="mission-meta"><span>15 daerah</span><span>2 poin / benar</span></div><button
+                                class="btn btn-primary btn-full" data-open-mission="1">MULAI MISI
+                                <span>→</span></button>
+                        </div>
+                    </article>
+                    <article class="mission-card mission-card-two">
+                        <div class="mission-card-top"><span class="mission-index">MISI 02</span><span
+                                class="status-pill" id="statusM2">Belum dimulai</span></div>
+                        <div class="mission-art"><img alt="Penampilan berbagai tradisi Nusantara" loading="lazy"
+                                src="assets/visual/mission-tradition.webp" /><span class="mission-photo-overlay"><span
+                                    class="photo-play-circle">→</span> Jelajahi Misi 2</span></div>
+                        <div class="mission-card-body">
+                            <h3>Petualangan<br />Tradisi Nusantara</h3>
+                            <p>Jawab soal interaktif tentang tarian, tradisi, dan budaya dari berbagai daerah.</p>
+                            <div class="mission-meta"><span>15 soal</span><span>Ada penjelasan</span></div><button
+                                class="btn btn-primary btn-full" data-open-mission="2">MULAI MISI
+                                <span>→</span></button>
+                        </div>
+                    </article>
+                    <article class="mission-card mission-card-three">
+                        <div class="mission-card-top"><span class="mission-index">MISI 03</span><span
+                                class="status-pill" id="statusM3">Belum dimulai</span></div>
+                        <div class="mission-art"><img alt="Anak-anak Indonesia mengenakan pakaian adat" loading="lazy"
+                                src="assets/visual/mission-friendship.webp" /><span class="mission-photo-overlay"><span
+                                    class="photo-play-circle">→</span> Jelajahi Misi 3</span></div>
+                        <div class="mission-card-body">
+                            <h3>Sahabat<br />Keberagaman</h3>
+                            <p>Buka empat amplop dan pilih sikap yang tepat dalam kehidupan sehari-hari.</p>
+                            <div class="mission-meta"><span>4 amplop</span><span>10 poin / benar</span></div><button
+                                class="btn btn-primary btn-full" data-open-mission="3">MULAI MISI
+                                <span>→</span></button>
+                        </div>
+                    </article>
+                </div>
+                <div class="menu-footer">
+                    <div><strong>Belajar sambil bermain</strong>
+                        <p>Setiap misi punya tujuan yang berbeda, tetapi semuanya mengajak kita mengenal Indonesia.</p>
+                    </div><button class="btn btn-outline" id="showSummary">Lihat Ringkasan Poin →</button>
+                </div>
+            </section>
+            <section aria-labelledby="m1-title" class="screen" id="mission1">
+                <div class="game-heading">
+                    <div><span class="section-kicker">MISI 01 / 03</span>
+                        <h2 id="m1-title">Kenali <span>Pakaian Adat</span></h2>
+                        <p>Pilih titik daerah pada peta, lalu cocokan dengan pakaian adat yang sesuai.</p>
+                    </div>
+                    <div class="score-panel"><small>SKOR MISI</small><strong id="m1Score">0 <span>/ 30</span></strong>
+                    </div>
+                </div>
+                <div class="progress-row"><span id="m1ProgressText">0 dari 15 daerah selesai</span>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="m1ProgressBar"></div>
+                    </div><span class="progress-end">15 daerah</span>
+                </div>
+                <div class="game-layout">
+                    <div class="game-panel map-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Peta Indonesia</h3><small>Klik salah satu titik merah di peta</small>
+                            </div><span class="soft-tag">15 titik</span>
+                        </div>
+                        <div aria-label="Peta interaktif 15 daerah" class="map-viewport">
+                            <div class="map-stage"><img alt="Peta Indonesia" draggable="false"
+                                    src="assets/peta-indonesia.jpg" />
+                                <div class="map-markers" id="mapMarkers"></div>
+                            </div>
+                        </div>
+                        <div class="map-legend"><span><i class="dot red-dot"></i> Belum dijawab</span><span><i
+                                    class="dot blue-dot"></i> Benar</span><span><i class="dot grey-dot"></i>
+                                Hangus</span></div>
+                        <div class="region-picker"><label for="regionSelect">Atau pilih daerah melalui
+                                daftar:</label><select id="regionSelect">
+                                <option value="">— Pilih daerah —</option>
+                            </select></div>
+                        <div class="target-box">
+                            <div class="target-top">
+                                <div><small>DAERAH YANG DIPILIH</small><strong id="selectedRegionName">Belum memilih
+                                        daerah</strong></div><span class="target-indicator" id="targetIndicator">Pilih
+                                    titik</span>
+                            </div>
+                            <div aria-label="Area meletakkan pakaian adat" class="drop-zone" id="dropZone" role="button"
+                                tabindex="0"><span class="drop-emoji"></span>
+                                <div><strong id="dropTitle">Letakkan pakaian adat di sini</strong><small
+                                        id="dropHelp">Pilih daerah lebih dulu, kemudian klik atau seret gambar
+                                        pakaian.</small></div>
+                            </div>
+                            <div aria-live="polite" class="feedback-line" id="m1Feedback"></div>
+                            <div aria-live="polite" class="material-card hidden" id="m1Material"></div>
+                        </div>
+                    </div>
+                    <aside class="game-panel costumes-panel">
+                        <div class="panel-heading">
+                            <div>
+                                <h3>Pilihan Pakaian Adat</h3><small>15 kartu tersedia • pilih atau seret</small>
+                            </div><span class="soft-tag" id="remainingCostumeCount">15 kartu</span>
+                        </div>
+                        <div class="photo-note"><span>Foto pakaian adat dari dokumen referensi yang kamu kirim. Klik
+                                atau seret kartu untuk menjawab.</span></div>
+                        <div class="costume-grid" id="costumeGrid"></div>
+                    </aside>
+                </div>
+                <div class="game-bottom-actions"><button class="btn btn-outline" data-go="missions">← Kembali ke
+                        Misi</button><button class="btn btn-light" data-reset-mission="1">Ulangi Misi 1</button></div>
+            </section>
+            <section aria-labelledby="m2-title" class="screen" id="mission2">
+                <div class="game-heading">
+                    <div><span class="section-kicker">MISI 02 / 03</span>
+                        <h2 id="m2-title">Petualangan <span>Tradisi Nusantara</span></h2>
+                        <p>Pilih satu jawaban yang paling tepat. Setelah itu, baca penjelasannya sebelum lanjut.</p>
+                    </div>
+                    <div class="score-panel"><small>SKOR MISI</small><strong id="m2Score">0 <span>/ 30</span></strong>
+                    </div>
+                </div>
+                <div class="quiz-container">
+                    <div class="quiz-header"><span class="question-counter" id="quizCounter">SOAL 01 / 15</span><span
+                            class="soft-tag">Pilihan ganda</span></div>
+                    <div class="progress-track wide">
+                        <div class="progress-fill" id="m2ProgressBar"></div>
+                    </div>
+                    <div class="quiz-question-area">
+                        <div class="question-visual"><img alt="Ilustrasi realistis tradisi Nusantara pada soal pertama"
+                                id="quizVisualImage" src="assets/tradisi/q1.webp" />
+                            <div class="question-visual-meta"><small>GALERI TRADISI NUSANTARA</small><strong
+                                    id="quizVisualText">Amati gambar dan pilih jawaban</strong></div>
+                            <p class="visual-disclaimer">Gambar ilustrasi realistis untuk membantu mengenali tradisi.
+                            </p>
+                        </div>
+                        <div class="question-copy"><span class="overline">PILIH JAWABAN YANG PALING TEPAT</span>
+                            <h3 id="quizQuestion">Pertanyaan akan muncul di sini.</h3>
+                            <div class="quiz-instructions"><strong>Cara menjawab</strong>
+                                <p>Amati gambar dengan teliti, lalu pilih satu dari empat jawaban. Setelah memilih, kamu
+                                    akan mendapat penjelasan tentang tradisi tersebut.</p>
+                                <div class="quiz-mini-steps"><span>01 Amati</span><span>02 Jawab</span><span>03
+                                        Pelajari</span></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="answers-grid" id="quizOptions"></div>
+                    <div aria-live="polite" class="answer-feedback hidden" id="m2Feedback"></div>
+                    <div class="quiz-actions">
+                        <div class="helper-caption">Setiap jawaban hanya bisa dipilih satu kali.</div><button
+                            class="btn btn-primary" disabled="" id="quizNext">NEXT <span>→</span></button>
+                    </div>
+                </div>
+                <div class="game-bottom-actions"><button class="btn btn-outline" data-go="missions">← Kembali ke
+                        Misi</button><button class="btn btn-light" data-reset-mission="2">Ulangi Misi 2</button></div>
+            </section>
+            <section aria-labelledby="m3-title" class="screen" id="mission3">
+                <div class="game-heading">
+                    <div><span class="section-kicker">MISI 03 / 03</span>
+                        <h2 id="m3-title">Misi <span>Sahabat Keberagaman</span></h2>
+                        <p>Buka amplop berurutan, lalu tentukan apakah pernyataannya benar atau salah.</p>
+                    </div>
+                    <div class="score-panel"><small>SKOR MISI</small><strong id="m3Score">0 <span>/ 40</span></strong>
+                    </div>
+                </div>
+                <div class="progress-row"><span id="m3ProgressText">0 dari 4 amplop selesai</span>
+                    <div class="progress-track">
+                        <div class="progress-fill" id="m3ProgressBar"></div>
+                    </div><span class="progress-end">4 amplop</span>
+                </div>
+                <div class="envelope-grid" id="envelopeGrid"></div>
+                <div class="scenario-shell hidden" id="scenarioShell">
+                    <div class="scenario-intro"><span class="scenario-tag" id="scenarioCategory">AMPLOP 1</span>
+                        <h3 id="scenarioTitle">Tantangan Keberagaman</h3>
+                        <p id="scenarioOriginal"></p>
+                    </div>
+                    <div class="statement-box"><span>MENURUTMU, PERNYATAAN INI...</span>
+                        <p id="scenarioStatement"></p>
+                        <div class="binary-buttons" id="binaryButtons"><button class="binary-btn true-btn"
+                                data-binary="true">BENAR</button><button class="binary-btn false-btn"
+                                data-binary="false">SALAH</button></div>
+                    </div>
+                    <div aria-live="polite" class="answer-feedback hidden" id="m3Feedback"></div>
+                    <div class="scenario-actions"><span class="helper-caption">Jawaban benar akan mendapat 10
+                            poin.</span><button class="btn btn-primary" disabled="" id="envelopeNext">LANJUT
+                            <span>→</span></button></div>
+                </div>
+                <div class="game-bottom-actions"><button class="btn btn-outline" data-go="missions">← Kembali ke
+                        Misi</button><button class="btn btn-light" data-reset-mission="3">Ulangi Misi 3</button></div>
+            </section>
+            <section aria-labelledby="results-title" class="screen" id="results">
+                <div class="results-hero"><img alt="Keberagaman budaya Indonesia" class="result-photo" loading="lazy"
+                        src="assets/visual/result-culture.webp" /><span class="section-kicker">HASIL PETUALANGAN</span>
+                    <h2 id="results-title">Hebat! Misi <span>selesai!</span></h2>
+                    <p id="resultDescription">Kamu sudah menyelesaikan petualangan ini. Terus semangat belajar ya!</p>
+                    <div class="results-number"><span id="resultScore">0</span><small id="resultMax">/ 30 POIN</small>
+                    </div>
+                    <div class="result-target" id="resultTarget">Lihat hasil pencapaianmu</div>
+                </div>
+                <div class="results-details">
+                    <h3 id="resultStatsTitle">Ringkasan Hasil</h3>
+                    <div class="results-stats" id="resultStats"></div>
+                </div>
+                <div class="result-actions"><button class="btn btn-outline" id="resultStudy">Ulangi Misi (Mode
+                        Belajar)</button><button class="btn btn-primary" id="resultNextMission">Next Misi
+                        →</button><button class="btn btn-restart hidden" id="resultRestart"><span>🔄</span> Restart Game
+                        (Mulai dari Awal)</button></div>
+            </section>
+        </main>
+        <footer class="footer"><span>Keberagaman Lingkunganku</span><span>Kenali budaya • Hargai perbedaan • Cintai
+                Indonesia</span></footer>
+    </div>
+    <div aria-live="polite" class="toast" id="toast" role="status"></div>
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
