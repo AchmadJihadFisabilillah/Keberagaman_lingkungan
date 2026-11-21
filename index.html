@@ -30,12 +30,82 @@
                 </div>
             </div>
             <div class="topbar-right">
-                <span class="header-pill"><span class="pill-dot"></span> Siap dimainkan</span>
+                <span class="header-pill"><span class="pill-dot"></span> <span id="playerStatus">Siap dimainkan</span></span>
                 <span class="score-chip" id="globalScore">0 poin</span>
             </div>
         </header>
         <main id="main-content">
-            <section aria-labelledby="landing-title" class="screen is-active" id="landing">
+            <section aria-labelledby="welcome-title" class="screen is-active" id="welcome">
+                <div class="welcome-nature-screen">
+                    <!-- Lapisan Langit & Burung Terbang Bergerak -->
+                    <div class="sky-birds-layer" aria-hidden="true">
+                        <div class="flying-bird bird-1">
+                            <svg class="bird-svg" viewBox="0 0 50 30">
+                                <path class="bird-wing wing-left" d="M25,18 Q12,2 2,12 Q14,14 25,18 Z"></path>
+                                <path class="bird-body" d="M22,18 Q25,15 30,17 Q34,18 32,21 Q27,20 22,18 Z"></path>
+                                <path class="bird-wing wing-right" d="M25,18 Q38,2 48,12 Q36,14 25,18 Z"></path>
+                            </svg>
+                        </div>
+                        <div class="flying-bird bird-2">
+                            <svg class="bird-svg" viewBox="0 0 50 30">
+                                <path class="bird-wing wing-left" d="M25,18 Q12,2 2,12 Q14,14 25,18 Z"></path>
+                                <path class="bird-body" d="M22,18 Q25,15 30,17 Q34,18 32,21 Q27,20 22,18 Z"></path>
+                                <path class="bird-wing wing-right" d="M25,18 Q38,2 48,12 Q36,14 25,18 Z"></path>
+                            </svg>
+                        </div>
+                        <div class="flying-bird bird-3">
+                            <svg class="bird-svg" viewBox="0 0 50 30">
+                                <path class="bird-wing wing-left" d="M25,18 Q12,2 2,12 Q14,14 25,18 Z"></path>
+                                <path class="bird-body" d="M22,18 Q25,15 30,17 Q34,18 32,21 Q27,20 22,18 Z"></path>
+                                <path class="bird-wing wing-right" d="M25,18 Q38,2 48,12 Q36,14 25,18 Z"></path>
+                            </svg>
+                        </div>
+                        <div class="flying-bird bird-4">
+                            <svg class="bird-svg" viewBox="0 0 50 30">
+                                <path class="bird-wing wing-left" d="M25,18 Q12,2 2,12 Q14,14 25,18 Z"></path>
+                                <path class="bird-body" d="M22,18 Q25,15 30,17 Q34,18 32,21 Q27,20 22,18 Z"></path>
+                                <path class="bird-wing wing-right" d="M25,18 Q38,2 48,12 Q36,14 25,18 Z"></path>
+                            </svg>
+                        </div>
+                        <div class="flying-bird bird-5">
+                            <svg class="bird-svg" viewBox="0 0 50 30">
+                                <path class="bird-wing wing-left" d="M25,18 Q12,2 2,12 Q14,14 25,18 Z"></path>
+                                <path class="bird-body" d="M22,18 Q25,15 30,17 Q34,18 32,21 Q27,20 22,18 Z"></path>
+                                <path class="bird-wing wing-right" d="M25,18 Q38,2 48,12 Q36,14 25,18 Z"></path>
+                            </svg>
+                        </div>
+                    </div>
+
+                    <!-- Kartu Welcome Tengah -->
+                    <div class="welcome-center-card">
+                        <div class="welcome-badge">
+                            <span>🌿 PETUALANGAN BUDAYA NUSANTARA 🌿</span>
+                        </div>
+                        <h1 class="welcome-heading" id="welcome-title">
+                            Ayo Jelajahi <span>Nusantara</span>
+                        </h1>
+                        <p class="welcome-subtitle">
+                            Kenali ragam pakaian adat, pahami tradisi daerah, dan belajar bersikap toleran di seluruh Indonesia!
+                        </p>
+
+                        <form class="welcome-form" id="welcomeForm" novalidate>
+                            <label class="welcome-label" for="playerNameInput">
+                                <span class="avatar-icon">🎒</span> Masukkan Nama Panggilanmu (Wajib):
+                            </label>
+                            <div class="welcome-input-row">
+                                <input autocomplete="off" class="welcome-input" id="playerNameInput" maxlength="25"
+                                    placeholder="Ketik namamu di sini..." required type="text" />
+                                <button class="btn btn-primary welcome-continue-btn" id="welcomeContinueBtn"
+                                    type="submit">
+                                    CONTINUE <span>→</span>
+                                </button>
+                            </div>
+                            <small class="welcome-hint">✨ Wajib mengisi nama panggilan untuk mulai petualangan.</small>
+                        </form>
+                    </div>
+                </div>
+            </section>
+            <section aria-labelledby="landing-title" class="screen" id="landing">
                 <div class="hero-grid">
                     <div class="hero-copy">
                         <div class="eyebrow">PETUALANGAN BUDAYA NUSANTARA</div>
@@ -68,14 +138,12 @@
                 </div>
                 <div class="welcome-stats">
                     <div><img alt="Foto pakaian adat Nusantara" class="stat-photo" loading="lazy"
-                            src="assets/visual/objective-clothing.webp" /><strong>15</strong><small>Pakaian Adat</small>
+                            src="assets/visual/stat-clothing.webp" /><strong>15</strong><small>Pakaian Adat</small>
                     </div>
                     <div><img alt="Ilustrasi tradisi Nusantara" class="stat-photo" loading="lazy"
-                            src="assets/visual/objective-tradition.webp" /><strong>15</strong><small>Soal
-                            Tradisi</small></div>
+                            src="assets/visual/stat-tradition.webp" /><strong>15</strong><small>Tradisi</small></div>
                     <div><img alt="Foto anak-anak Indonesia" class="stat-photo" loading="lazy"
-                            src="assets/visual/objective-friendship.webp" /><strong>4</strong><small>Amplop
-                            Sikap</small></div>
+                            src="assets/visual/stat-friendship.webp" /><strong>4</strong><small>Amplop Sikap</small></div>
                 </div>
             </section>
             <section aria-labelledby="objectives-title" class="screen" id="objectives">
@@ -133,54 +201,53 @@
                     <p>Pilih misi yang ingin kamu mainkan. Kamu bisa kembali ke sini kapan saja.</p>
                 </div>
                 <div class="mission-grid">
-                    <article class="mission-card mission-card-one">
+                    <article class="mission-card mission-card-one" id="cardM1">
                         <div class="mission-card-top"><span class="mission-index">MISI 01</span><span
                                 class="status-pill" id="statusM1">Belum dimulai</span></div>
                         <div class="mission-art"><img alt="Beragam pakaian adat Indonesia dari Aceh, Madura, dan Bali"
                                 loading="lazy" src="assets/visual/mission-clothing.webp" /><span
-                                class="mission-photo-overlay"><span class="photo-play-circle">→</span> Jelajahi Misi
+                                class="mission-photo-overlay" id="overlayM1"><span class="photo-play-circle">→</span> Jelajahi Misi
                                 1</span></div>
                         <div class="mission-card-body">
                             <h3>Kenali<br />Pakaian Adat</h3>
                             <p>Temukan daerah asal pakaian adat dengan mencocokkan foto pada peta Indonesia.</p>
                             <div class="mission-meta"><span>15 daerah</span><span>2 poin / benar</span></div><button
-                                class="btn btn-primary btn-full" data-open-mission="1">MULAI MISI
+                                class="btn btn-primary btn-full" data-open-mission="1" id="btnM1">MULAI MISI
                                 <span>→</span></button>
                         </div>
                     </article>
-                    <article class="mission-card mission-card-two">
+                    <article class="mission-card mission-card-two is-locked" id="cardM2">
                         <div class="mission-card-top"><span class="mission-index">MISI 02</span><span
-                                class="status-pill" id="statusM2">Belum dimulai</span></div>
+                                class="status-pill locked" id="statusM2">🔒 Terkunci</span></div>
                         <div class="mission-art"><img alt="Penampilan berbagai tradisi Nusantara" loading="lazy"
-                                src="assets/visual/mission-tradition.webp" /><span class="mission-photo-overlay"><span
-                                    class="photo-play-circle">→</span> Jelajahi Misi 2</span></div>
+                                src="assets/visual/mission-tradition.webp" /><span class="mission-photo-overlay" id="overlayM2">🔒 Terkunci</span></div>
                         <div class="mission-card-body">
                             <h3>Petualangan<br />Tradisi Nusantara</h3>
                             <p>Jawab soal interaktif tentang tarian, tradisi, dan budaya dari berbagai daerah.</p>
                             <div class="mission-meta"><span>15 soal</span><span>Ada penjelasan</span></div><button
-                                class="btn btn-primary btn-full" data-open-mission="2">MULAI MISI
-                                <span>→</span></button>
+                                class="btn btn-primary btn-full is-locked-btn" data-open-mission="2" id="btnM2">🔒 TERKUNCI</button>
                         </div>
                     </article>
-                    <article class="mission-card mission-card-three">
+                    <article class="mission-card mission-card-three is-locked" id="cardM3">
                         <div class="mission-card-top"><span class="mission-index">MISI 03</span><span
-                                class="status-pill" id="statusM3">Belum dimulai</span></div>
+                                class="status-pill locked" id="statusM3">🔒 Terkunci</span></div>
                         <div class="mission-art"><img alt="Anak-anak Indonesia mengenakan pakaian adat" loading="lazy"
-                                src="assets/visual/mission-friendship.webp" /><span class="mission-photo-overlay"><span
-                                    class="photo-play-circle">→</span> Jelajahi Misi 3</span></div>
+                                src="assets/visual/mission-friendship.webp" /><span class="mission-photo-overlay" id="overlayM3">🔒 Terkunci</span></div>
                         <div class="mission-card-body">
                             <h3>Sahabat<br />Keberagaman</h3>
                             <p>Buka empat amplop dan pilih sikap yang tepat dalam kehidupan sehari-hari.</p>
                             <div class="mission-meta"><span>4 amplop</span><span>10 poin / benar</span></div><button
-                                class="btn btn-primary btn-full" data-open-mission="3">MULAI MISI
-                                <span>→</span></button>
+                                class="btn btn-primary btn-full is-locked-btn" data-open-mission="3" id="btnM3">🔒 TERKUNCI</button>
                         </div>
                     </article>
                 </div>
                 <div class="menu-footer">
                     <div><strong>Belajar sambil bermain</strong>
-                        <p>Setiap misi punya tujuan yang berbeda, tetapi semuanya mengajak kita mengenal Indonesia.</p>
-                    </div><button class="btn btn-outline" id="showSummary">Lihat Ringkasan Poin →</button>
+                        <p>Setiap misi punya tujuan yang berbeda. Selesaikan Misi 1, Misi 2, hingga Misi 3 Amplop 4 untuk melihat Ringkasan Poin!</p>
+                    </div>
+                    <div id="missionsFooterAction">
+                        <span class="summary-locked-tag"><span class="lock-icon">🔒</span> Terkunci (Selesaikan Misi 3 Amplop 4)</span>
+                    </div>
                 </div>
             </section>
             <section aria-labelledby="m1-title" class="screen" id="mission1">
@@ -321,12 +388,23 @@
                             poin.</span><button class="btn btn-primary" disabled="" id="envelopeNext">LANJUT
                             <span>→</span></button></div>
                 </div>
+                <div class="m3-summary-banner hidden" id="m3SummaryBanner">
+                    <div class="m3-summary-content">
+                        <span class="m3-summary-badge">🏆 PETUALANGAN SELESAI</span>
+                        <h4>Hebat! Misi 3 & Amplop 4 Telah Selesai!</h4>
+                        <p>Kamu sudah menuntaskan seluruh 4 amplop sikap toleransi. Klik tombol untuk melihat ringkasan poin dan hasil akhir petualanganmu!</p>
+                    </div>
+                    <button class="btn btn-primary btn-summary-envelope" data-action="summary" id="m3SummaryBannerBtn">
+                        Lihat Ringkasan Poin →
+                    </button>
+                </div>
                 <div class="game-bottom-actions"><button class="btn btn-outline" data-go="missions">← Kembali ke
                         Misi</button><button class="btn btn-light" data-reset-mission="3">Ulangi Misi 3</button></div>
             </section>
             <section aria-labelledby="results-title" class="screen" id="results">
                 <div class="results-hero"><img alt="Keberagaman budaya Indonesia" class="result-photo" loading="lazy"
                         src="assets/visual/result-culture.webp" /><span class="section-kicker">HASIL PETUALANGAN</span>
+                    <div class="result-player-pill" id="resultPlayerPill"><span class="pill-icon">🎒</span> Petualang: <strong id="resultPlayerName">Sahabat Nusantara</strong></div>
                     <h2 id="results-title">Hebat! Misi <span>selesai!</span></h2>
                     <p id="resultDescription">Kamu sudah menyelesaikan petualangan ini. Terus semangat belajar ya!</p>
                     <div class="results-number"><span id="resultScore">0</span><small id="resultMax">/ 30 POIN</small>
